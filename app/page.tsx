@@ -1,87 +1,66 @@
-import AnnouncementBar from "./components/AnnouncementBar";
-import Navbar from "./components/Navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="bg-[#FCF8F6] text-[#111111]">
+    <main style={{ backgroundColor: "#FCF8F6", color: "#111" }}>
 
-      {/* TOP BAR */}
-      <AnnouncementBar />
-
-      {/* NAVBAR */}
-      <Navbar />
-
-      {/* HERO */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32">
-
-        <h1 className="text-6xl md:text-7xl font-serif tracking-wide">
-          Soft care for stronger hair
+      {/* HERO SECTION */}
+      <section style={{ textAlign: "center", padding: "120px 20px" }}>
+        <h1 style={{ fontSize: "64px", letterSpacing: "2px" }}>
+          ZUZA HAIRCARE
         </h1>
 
-        <p className="mt-4 text-lg opacity-70 max-w-md">
-          Minimal haircare designed to nourish, protect and enhance your natural beauty.
+        <p style={{ fontSize: "18px", marginTop: "20px", color: "#555" }}>
+          Healthy looking hair with confidence
         </p>
 
-        <a href="/product">
-          <button className="mt-8 px-8 py-3 rounded-full bg-[#111111] text-white hover:opacity-80 transition">
+        <Link href="/product">
+          <button
+            style={{
+              marginTop: "40px",
+              padding: "14px 28px",
+              backgroundColor: "#C88B9D",
+              color: "white",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "14px",
+              letterSpacing: "1px",
+            }}
+          >
             SHOP NOW
           </button>
-        </a>
-
-        <div className="mt-16 w-full max-w-4xl h-[420px] bg-[#F4DCDC] rounded-3xl" />
+        </Link>
       </section>
 
       {/* PRODUCT PREVIEW */}
-      <section className="py-24 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <section style={{ textAlign: "center", padding: "80px 20px" }}>
+        <h2 style={{ fontSize: "32px" }}>Hair Serum</h2>
 
-        <div className="h-[520px] bg-[#F4DCDC] rounded-3xl" />
-
-        <div>
-          <h2 className="text-4xl font-serif">Hair Serum</h2>
-
-          <p className="mt-4 opacity-70">
-            A lightweight serum designed to nourish the scalp and support healthier-looking hair.
-          </p>
-
-          <a href="/product">
-            <button className="mt-6 px-6 py-3 border border-black rounded-full hover:bg-black hover:text-white transition">
-              DISCOVER
-            </button>
-          </a>
-
-          <div className="mt-10 grid grid-cols-2 gap-4 text-sm opacity-80">
-            <p>✿ Rosemary</p>
-            <p>✿ Peptides</p>
-            <p>✿ Biotin</p>
-            <p>✿ Caffeine</p>
-          </div>
-        </div>
-      </section>
-
-      {/* REVIEWS */}
-      <section className="py-20 text-center bg-[#F4DCDC]/40">
-        <p className="text-2xl">★★★★★</p>
-        <p className="mt-4 italic max-w-md mx-auto">
-          “Absolutely love the feel of my hair after just a few uses.”
+        <p
+          style={{
+            maxWidth: "500px",
+            margin: "20px auto",
+            color: "#555",
+            lineHeight: "1.6",
+          }}
+        >
+          A lightweight serum designed to nourish the scalp and support healthier-looking hair.
         </p>
+
+        <Link href="/product">
+          <button
+            style={{
+              padding: "12px 24px",
+              border: "1px solid #111",
+              background: "transparent",
+              cursor: "pointer",
+              marginTop: "10px",
+            }}
+          >
+            DISCOVER
+          </button>
+        </Link>
       </section>
-
-      {/* INSTAGRAM */}
-      <section className="py-24 px-6 max-w-6xl mx-auto text-center">
-        <h3 className="text-3xl font-serif mb-10">Instagram</h3>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="h-40 bg-[#F4DCDC] rounded-2xl" />
-          <div className="h-40 bg-[#F4DCDC] rounded-2xl" />
-          <div className="h-40 bg-[#F4DCDC] rounded-2xl" />
-          <div className="h-40 bg-[#F4DCDC] rounded-2xl" />
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="py-10 text-center text-sm opacity-60">
-        © 2026 ZUZA HAIRCARE. All rights reserved.
-      </footer>
 
     </main>
   );
